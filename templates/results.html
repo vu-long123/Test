@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>Walls</title>
+</head>
+
+<body>
+  <div className="grid-container">
+    {% for image in results %}
+    <div class="imagediv" >
+      <a href="{{ image.fullHDURL }}" target="_blank" download="download">
+        <img src="{{ image.fullHDURL }}" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+
+</body>
+
+</html>
